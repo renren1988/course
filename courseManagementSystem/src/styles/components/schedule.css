@@ -1,0 +1,179 @@
+/* src/styles/components/schedule.css */
+/* 课程表主体 */
+
+.schedule-form {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  vertical-align: top;
+  /* 让内容从顶部开始显示 */
+}
+
+.schedule-table th {
+  background-color: #f2f2f2;
+}
+
+select,
+input {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.class-block {
+  position: relative;
+  padding-right: 20px;  /* 为删除按钮留出空间 */
+  padding: 5px 20px 5px 5px;  /* 右侧为删除按钮留出空间，其他边距适中 */
+  margin: 2px;
+  background-color: #e3f2fd;
+  border-radius: 3px;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+.class-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;  /* 行间距离 */
+}
+
+.class-info > div {
+  white-space: nowrap;  /* 防止文本换行 */
+  overflow: hidden;
+  text-overflow: ellipsis;  /* 文本过长时显示省略号 */
+}
+
+.class-name {
+  font-weight: bold;
+  color: #1976d2;
+}
+
+.class-teachers {
+  color: #2196f3;
+}
+
+.class-group {
+  color: #4caf50;
+}
+
+.class-location {
+  color: #757575;
+  font-size: 12px;
+}
+
+.select-hint {
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.manage-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  margin: 5px 0;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 3px 8px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+.class-block .delete-class {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background-color: rgba(220, 53, 69, 0.8);  /* 半透明红色背景 */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 14px;
+  line-height: 14px;
+  cursor: pointer;
+  display: none;
+  padding: 0;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.class-block .delete-class:hover {
+  background-color: rgba(220, 53, 69, 1);  /* 完全不透明的红色 */
+  transform: scale(1.1);  /* 悬停时略微放大 */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.class-block:hover .delete-class {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-container {
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.filter-container select {
+  padding: 8px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  min-width: 150px;
+}
+
+.publish-btn {
+  margin-left: 10px;
+  background-color: #28a745;
+}
+
+.publish-btn:hover {
+  background-color: #218838;
+}
+
+.hidden {
+  display: none;
+}

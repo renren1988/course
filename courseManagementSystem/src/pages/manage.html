@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理教师和学生组</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components/schedule.css">
+    <link rel="stylesheet" href="../styles/components/teacher-management.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div class="nav">
+        <a href="scheduling.html" data-page="scheduling">排课</a>
+        <a href="viewSchedule.html" data-page="viewSchedule">查看课表</a> 
+        <a href="manage.html" data-page="manageTeachersGroups">管理教师和学生组</a>
+    </div>
+
+    <!-- 教师和学生组管理页面 -->
+    <div id="manageTeachersGroups">
+        <h2>管理教师和学生组</h2>
+        <div>
+            <h3>教师管理</h3>
+            <input type="text" id="newTeacherName" placeholder="输入教师姓名">
+            <button id="addTeacherBtn">添加教师</button>
+            <div id="teacherManageList"></div>
+        </div>
+        <div class="student-group-section">
+            <h3>学生组管理</h3>
+            <input type="text" id="newGroupName" placeholder="输入学生组名称">
+            <button id="addGroupBtn">添加学生组</button>
+            <div id="groupManageList"></div>
+        </div>
+    </div>
+    <!-- 使用type="module"支持ES6模块导入导出 -->
+    <script type="module" src="./scripts/app.js"></script>
+</body>
+</html>
