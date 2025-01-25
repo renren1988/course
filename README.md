@@ -1,3 +1,4 @@
+```python
 course-scheduler/  
 ├── src/  
 │   ├── pages/             # 页面级HTML文件  
@@ -32,3 +33,4 @@ course-scheduler/
 │  
 ├── package.json  
 └── vite.config.js       # 构建配置（可选）  
+```
